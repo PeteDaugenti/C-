@@ -1,0 +1,47 @@
+﻿// Assignment 12
+//
+// Submitted by Peter Daugenti
+// Operating System: Microsoft Windows 10
+// IDE: Microsoft Visual Studio
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace A12Daugenti
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+            bool found;
+            string[] toppings = { "cheese", "pepperoni", "green pepper", "onion", "mushroom" };
+            double[] price = { 1.30, 1.90, 1.80, 1.70, 1.60 };
+
+            Console.WriteLine("Choose a topping: cheese, pepperoni, green pepper, onion or mushroom");
+            Console.Write("Please type the topping that you want - exactly as it appears above:");
+            string order = Console.ReadLine();
+            Console.WriteLine("\nYou chose: " + order);
+
+            found = false;
+            for (int i = 0; i < 5; i++)
+            {
+                if (order.Equals(toppings[i]))
+                {
+                    found = true;
+                    var prices =  toppings[i] + " is " + price[i];
+                    Console.WriteLine("\nThe price of " + prices);
+                }
+            }
+            if (!found)
+            {
+                Console.WriteLine("The product" + order + "was not found, please try again!!!!!\n");
+                Console.Write("Hit any key to close"); Console.ReadKey(true);
+                return;
+            }
+        }
+    }
+}

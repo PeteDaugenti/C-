@@ -1,0 +1,31 @@
+﻿// Assigment 09
+//
+// Submitted by Peter Daugenti
+// Operating System: Microsoft Windows 10
+// IDE: Microsoft Visual Studio
+using System;
+
+namespace Assignment09
+{
+    class Dog
+    {
+        public void bark()
+        {
+            Console.WriteLine("Empty method");
+        }
+        public void bark(string dogsName)
+        {
+            Console.WriteLine(dogsName + " is barking");
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+            Dog fido = new Dog();
+            fido.bark();
+            fido.bark("Fido");
+        }
+    }
+}

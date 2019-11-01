@@ -1,0 +1,35 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Assignment07
+{
+    class Dog
+    {
+        public void bark(string dogsName)
+        {
+            Console.WriteLine(dogsName + "is barking");
+        }
+        public void run(string dogsName)
+        {
+            Console.WriteLine(dogsName + "is running");
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+            Dog fido = new Dog();
+            for(int bark = 0; bark <= 5; bark++)
+            {
+                fido.bark("Fido ");
+            }
+            for(int run = 0; run <= 10; run++)
+            {
+                fido.run("Fido ");
+            }
+        }
+    }
+}
